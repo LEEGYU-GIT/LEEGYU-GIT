@@ -34,7 +34,7 @@ LG Aimers 7기 오프라인 해커톤 **상위 12%** 달성
 - **Metric:** SMAPE 0.515
 - **Tech:** `Python`, `Jupyter Notebook`, `Machine Learning`, `Pytorch`
 - **Highlights:** 2년 치 시계열 데이터를 분석하고, 끈질긴 모델 튜닝을 통해 예측 성능 극대화
-- **Links:** https://github.com/LEEGYU-GIT/LG-Aimer-7th-our-team https://github.com/LEEGYU-GIT/CodeBrainer
+- **Links:** https://github.com/LEEGYU-GIT/LG-Aimer-7th-our-team
 ---
 
 ## 🛠 Tech Stack
