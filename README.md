@@ -104,7 +104,7 @@ Raspberry Pi 5 위에서 도는 규칙 기반 자율주행차를 만들었습니
 
 </details>
 
-**Case study →** [leegyu-git.github.io/2026AMET](https://leegyu-git.github.io/2026AMET/) · **Repo →** [LEEGYU-GIT/2026AMET](https://github.com/LEEGYU-GIT/2026AMET)
+**Case study →** [LEEGYU-GIT/2026AMET](https://github.com/LEEGYU-GIT/2026AMET)
 
 `Python` `OpenCV` `scikit-learn` `ROS2 Jazzy` `rosbag2` `pytest` `Raspberry Pi 5`
 
@@ -228,5 +228,5 @@ Raspberry Pi 5 위에서 도는 규칙 기반 자율주행차를 만들었습니
 <p>
   <a href="https://assidu.tistory.com/"><img src="https://img.shields.io/badge/Blog-assidu.tistory.com-FF5A4A?style=for-the-badge&logo=tistory&logoColor=white"/></a>
   <a href="mailto:ljsn12@naver.com"><img src="https://img.shields.io/badge/Email-ljsn12@naver.com-03C75A?style=for-the-badge&logo=naver&logoColor=white"/></a>
-  <a href="https://leegyu-git.github.io/2026AMET/"><img src="https://img.shields.io/badge/Case_Study-AMET_2026-0F766E?style=for-the-badge&logo=githubpages&logoColor=white"/></a>
+  <a href="https://github.com/LEEGYU-GIT/2026AMET"><img src="https://img.shields.io/badge/Case_Study-AMET_2026-0F766E?style=for-the-badge&logo=githubpages&logoColor=white"/></a>
 </p>
