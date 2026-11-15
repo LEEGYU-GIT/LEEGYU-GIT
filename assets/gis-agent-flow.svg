@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="250" viewBox="0 0 1200 250" role="img" aria-label="자연어 질의 → LLM 조건 추출 → 코드 판정·실행 → 지도와 목록">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A1020"/><stop offset="1" stop-color="#11284A"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#475569"/>
+    </marker>
+  </defs>
+  <style>
+    .sans { font-family: 'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif; }
+    .mono { font-family: 'JetBrains Mono', 'Consolas', monospace; }
+    .node { opacity: 0; animation: pop .7s cubic-bezier(.2,.7,.2,1) forwards; }
+    .n2 { animation-delay: .3s } .n3 { animation-delay: .6s } .n4 { animation-delay: .9s } .n5 { animation-delay: 1.3s }
+    @keyframes pop { from { opacity: 0; transform: translateY(8px) } to { opacity: 1; transform: none } }
+    .hl { animation: hl 6s infinite; }
+    .h2 { animation-delay: 1.5s } .h3 { animation-delay: 3s } .h4 { animation-delay: 4.5s }
+    @keyframes hl { 0%, 22% { stroke-opacity: 1 } 28%, 100% { stroke-opacity: .25 } }
+  </style>
+  <rect width="1200" height="250" rx="16" fill="url(#bg)"/>
+
+  <!-- 연결선과 흐르는 점 -->
+  <g stroke="#334155" stroke-width="2" fill="none" marker-end="url(#arr)">
+    <path id="c1" d="M290 112H322"/><path id="c2" d="M578 112H610"/><path id="c3" d="M866 112H898"/>
+  </g>
+  <g fill="#2DD4BF">
+    <circle r="4"><animateMotion dur="1.5s" begin="0s;c3m.end" repeatCount="1" path="M290 112H322" id="c1m"/></circle>
+    <circle r="4"><animateMotion dur="1.5s" begin="c1m.end" repeatCount="1" path="M578 112H610" id="c2m"/></circle>
+    <circle r="4"><animateMotion dur="1.5s" begin="c2m.end" repeatCount="1" path="M866 112H898" id="c3m"/></circle>
+  </g>
+
+  <g class="sans">
+    <g class="node">
+      <rect x="40" y="46" width="250" height="132" rx="14" fill="#0B1628" stroke="#2DD4BF" stroke-width="1.5" class="hl"/>
+      <text x="60" y="76" font-size="13" fill="#5EEAD4" class="mono">01 · INPUT</text>
+      <text x="60" y="106" font-size="20" font-weight="700" fill="#F1F5F9">자연어 질의</text>
+      <text x="60" y="136" font-size="14" fill="#94A3B8">“동해호 지금 어디 있어?”</text>
+      <text x="60" y="158" font-size="14" fill="#94A3B8">“이 배 주변 10해리 선박”</text>
+    </g>
+    <g class="node n2">
+      <rect x="328" y="46" width="250" height="132" rx="14" fill="#0B1628" stroke="#60A5FA" stroke-width="1.5" class="hl h2"/>
+      <text x="348" y="76" font-size="13" fill="#93C5FD" class="mono">02 · LLM</text>
+      <text x="348" y="106" font-size="20" font-weight="700" fill="#F1F5F9">조건만 추출</text>
+      <text x="348" y="136" font-size="14" fill="#94A3B8">작업 9종 · 조건 6축 JSON</text>
+      <text x="348" y="158" font-size="14" fill="#94A3B8">스키마 강제 디코딩</text>
+    </g>
+    <g class="node n3">
+      <rect x="616" y="46" width="250" height="132" rx="14" fill="#0B1628" stroke="#FBBF24" stroke-width="1.5" class="hl h3"/>
+      <text x="636" y="76" font-size="13" fill="#FCD34D" class="mono">03 · CODE</text>
+      <text x="636" y="106" font-size="20" font-weight="700" fill="#F1F5F9">판정과 실행</text>
+      <text x="636" y="136" font-size="14" fill="#94A3B8">법령 기반 정의표 · MCP 연동</text>
+      <text x="636" y="158" font-size="14" fill="#94A3B8">동명 되묻기 · 0건 사유 안내</text>
+    </g>
+    <g class="node n4">
+      <rect x="904" y="46" width="256" height="132" rx="14" fill="#0B1628" stroke="#F472B6" stroke-width="1.5" class="hl h4"/>
+      <text x="924" y="76" font-size="13" fill="#F9A8D4" class="mono">04 · OUTPUT</text>
+      <text x="924" y="106" font-size="20" font-weight="700" fill="#F1F5F9">지도 + 목록</text>
+      <text x="924" y="136" font-size="14" fill="#94A3B8">항적 · 주변 선박 · 상황 재생</text>
+      <text x="924" y="158" font-size="14" fill="#94A3B8">AI 패널 UI</text>
+    </g>
+    <text x="600" y="220" text-anchor="middle" font-size="15" fill="#CBD5E1" class="node n5">모델은 조건만 뽑고, 실행과 판정은 코드가 정합니다</text>
+  </g>
+</svg>

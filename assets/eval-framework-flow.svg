@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="250" viewBox="0 0 1200 250" role="img" aria-label="에이전트 K회 실행 → 궤적 기록 → 안전성 관문 → 신뢰성 점수, 위험 등급에 따라 시험 강도 조절">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A1020"/><stop offset="1" stop-color="#1A2140"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#475569"/>
+    </marker>
+  </defs>
+  <style>
+    .sans { font-family: 'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif; }
+    .mono { font-family: 'JetBrains Mono', 'Consolas', monospace; }
+    .node { opacity: 0; animation: pop .7s cubic-bezier(.2,.7,.2,1) forwards; }
+    .n2 { animation-delay: .3s } .n3 { animation-delay: .6s } .n4 { animation-delay: .9s } .n5 { animation-delay: 1.3s }
+    @keyframes pop { from { opacity: 0; transform: translateY(8px) } to { opacity: 1; transform: none } }
+    .gate { animation: gate 3s ease-in-out infinite; }
+    @keyframes gate { 0%, 100% { fill: #0B1628 } 50% { fill: #2A1420 } }
+    .tier { opacity: .3; animation: tier 4.5s infinite; }
+    .t2 { animation-delay: 1.5s } .t3 { animation-delay: 3s }
+    @keyframes tier { 0%, 30% { opacity: 1 } 34%, 100% { opacity: .3 } }
+  </style>
+  <rect width="1200" height="250" rx="16" fill="url(#bg)"/>
+
+  <g stroke="#334155" stroke-width="2" fill="none" marker-end="url(#arr)">
+    <path d="M286 104H318"/><path d="M570 104H602"/><path d="M854 104H886"/>
+  </g>
+  <g fill="#A78BFA">
+    <circle r="4"><animateMotion dur="1.4s" begin="0s;e3.end" path="M286 104H318" id="e1"/></circle>
+    <circle r="4"><animateMotion dur="1.4s" begin="e1.end" path="M570 104H602" id="e2"/></circle>
+    <circle r="4"><animateMotion dur="1.4s" begin="e2.end" path="M854 104H886" id="e3"/></circle>
+  </g>
+
+  <g class="sans">
+    <g class="node">
+      <rect x="40" y="40" width="246" height="128" rx="14" fill="#0B1628" stroke="#A78BFA" stroke-width="1.5"/>
+      <text x="60" y="70" font-size="13" fill="#C4B5FD" class="mono">01 · RUN × K</text>
+      <text x="60" y="100" font-size="20" font-weight="700" fill="#F1F5F9">같은 과업 K번 실행</text>
+      <text x="60" y="130" font-size="14" fill="#94A3B8">결제 · 예약처럼 실제로</text>
+      <text x="60" y="150" font-size="14" fill="#94A3B8">일을 처리하는 에이전트</text>
+    </g>
+    <g class="node n2">
+      <rect x="324" y="40" width="246" height="128" rx="14" fill="#0B1628" stroke="#60A5FA" stroke-width="1.5"/>
+      <text x="344" y="70" font-size="13" fill="#93C5FD" class="mono">02 · TRACE</text>
+      <text x="344" y="100" font-size="20" font-weight="700" fill="#F1F5F9">행동 기록으로 판정</text>
+      <text x="344" y="130" font-size="14" fill="#94A3B8">도구 호출 기록과 최종 상태</text>
+      <text x="344" y="150" font-size="14" fill="#94A3B8">답변 문장보다 결과를 봄</text>
+    </g>
+    <g class="node n3">
+      <rect x="608" y="40" width="246" height="128" rx="14" stroke="#F87171" stroke-width="1.5" class="gate"/>
+      <text x="628" y="70" font-size="13" fill="#FCA5A5" class="mono">03 · SAFETY GATE</text>
+      <text x="628" y="100" font-size="20" font-weight="700" fill="#F1F5F9">안전성 관문</text>
+      <text x="628" y="130" font-size="14" fill="#94A3B8">K번 중 1번이라도 위반 → 불합격</text>
+      <text x="628" y="150" font-size="14" fill="#94A3B8">차단율 ↔ 오차단율 짝 보고</text>
+    </g>
+    <g class="node n4">
+      <rect x="892" y="40" width="268" height="128" rx="14" fill="#0B1628" stroke="#34D399" stroke-width="1.5"/>
+      <text x="912" y="70" font-size="13" fill="#6EE7B7" class="mono">04 · SCORE</text>
+      <text x="912" y="100" font-size="20" font-weight="700" fill="#F1F5F9">신뢰성 점수</text>
+      <text x="912" y="130" font-size="14" fill="#94A3B8">대상이 없으면 0점 대신</text>
+      <text x="912" y="150" font-size="14" fill="#94A3B8">‘계산 불가’로 표시</text>
+    </g>
+    <g class="node n5" font-size="14">
+      <text x="40" y="214" fill="#CBD5E1">위험 등급(SIL 원리 차용)에 따라 시험 강도를 올립니다</text>
+      <g class="mono" font-size="13">
+        <rect x="560" y="196" width="150" height="28" rx="14" fill="#13233D" class="tier"/><text x="635" y="215" text-anchor="middle" fill="#93C5FD" class="tier">등급 1 · 조회</text>
+        <rect x="722" y="196" width="190" height="28" rx="14" fill="#2A2410" class="tier t2"/><text x="817" y="215" text-anchor="middle" fill="#FCD34D" class="tier t2">등급 2 · 제한된 쓰기</text>
+        <rect x="924" y="196" width="236" height="28" rx="14" fill="#2A1420" class="tier t3"/><text x="1042" y="215" text-anchor="middle" fill="#FCA5A5" class="tier t3">등급 3 · 고권한 업무</text>
+      </g>
+    </g>
+  </g>
+</svg>
